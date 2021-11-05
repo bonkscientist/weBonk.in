@@ -1,0 +1,78 @@
+CREATE DATABASE IF NOT EXISTS weBONK;
+
+DROP TABLE IF EXISTS memes;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE IF NOT EXISTS users (
+	user_id bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+	username varchar(255) NOT NULL,
+	upassword varchar(255) NOT NULL,
+	upbonks int NOT NULL DEFAULT 0,
+	is_admin boolean NOT NULL DEFAULT false,
+	is_mod boolean NOT NULL DEFAULT false,
+	created_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+	PRIMARY KEY (user_id)
+);
+
+CREATE TABLE IF NOT EXISTS memes (
+	meme_id bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+	title varchar(255),
+	url varchar(505) NOT NULL,
+	upbonks int DEFAULT 0,
+	posted_on DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+	user_id bigint UNSIGNED,
+	PRIMARY KEY (meme_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    ON DELETE CASCADE   
+	ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOTE EXISTS user_meme_votes (
+	user_id bigint UNSIGNED NOT NULL,
+	meme_id bigint UNSIGNED NOT NULL,
+	time DATETIME DEFAULT CURRENT_TIMESTAMP(),
+	FOREIGN KEY (user_id) REFERENCES users(user_id),
+	FOREIGN KEY (meme_id) REFERENCES memes(meme_id)
+);
+
+CREATE TABLE IF NOTE EXISTS user_post_votes (
+	user_id bigint UNSIGNED NOT NULL,
+	meme_id bigint UNSIGNED NOT NULL,
+	time DEFAULT CURRENT_TIMESTAMP,
+	FOREIGN KEY (user_id) REFERENCES users(user_id),
+	FOREIGN KEY (meme_id) REFERENCES memes(meme_id)
+);
+
+INSERT INTO users (username, upassword)
+values (MD5('anonbonk'), MD5('44J8H=^pu&N@ju25'));
+
+INSERT INTO memes (title, url, user_id)
+values 
+	(NULL, 'execute-the-shitcoins.jpg', NULL),
+	(NULL, 'BASED_BONKZZERS.png', NULL),
+	(NULL, 'inhale-a-bonk.jpg', NULL),
+	(NULL, 'HACKER_BONKS.png', NULL),
+	(NULL, 'bonks3.jpg', NULL),
+	(NULL, 'batman_robin_bonk.jpg', NULL),
+	(NULL, 'mummys-soft-submissive-bonk.jpg', NULL),
+	(NULL, 'wake_up_BONK.png', NULL),
+	(NULL, 'screenshot-bonk.jpg', NULL),
+	(NULL, 'bonk-alone.gif', NULL),
+	(NULL, 'POV-BONKED.png', NULL),
+	(NULL, 'waves-of-bonk.jpg', NULL),
+	(NULL, 'MAX-BONK.png', NULL),
+	(NULL, 'HORNY-JAIL.png', NULL),
+	(NULL, 'GET_BONKED.png', NULL),
+	(NULL, 'bonks-go-up.jpg', NULL),
+	(NULL, 'bonks-in-your-area.png', NULL),
+	(NULL, 'wolf-of-bonk-street.jpg', NULL),
+	(NULL, 'DrBonks-Bonkenomics.png', NULL),
+	(NULL, 'do-the-bonk.jpg', NULL),
+	(NULL, 'doggybonkcoins.jpg', NULL),
+	(NULL, 'bonkdanoff.jpg', NULL),
+	(NULL, 'dogebonk_com_girls_love_bonks.png', NULL),
+	(NULL, 'allahbonk.jpg', NULL),
+	(NULL, 'BonkFKennedy.png', NULL);
+        
+SELECT * FROM memes;
+);

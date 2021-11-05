@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.ph-button-theme {
+  background:   black !important;
+  outline:      #FFA500 2px solid;
+  color:        #FFA500 !important;
+}
+
+.margin-lr-10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.grey.darken-5 {
+  background-color: #1B1B1B !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Product Page */
+#meme-page {
+  display: none;
+}
+
+#meme-page-content img {
+  max-width: -webkit-fill-available !important;
+  max-height: 500px;
+}
+
+.banner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.v-align-bottom {
+  vertical-align: bottom;
+}
+
+.page-footer a {
+  color: white;
+  font-weight: 500;
+}
+
+/*-----------------
+  Navigation Bar 
+  ------------------*/
+  nav ul a {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .tabs .tab {
+    float: right;
+  }
+
+  /* Navbar - Underline */
+  .main-nav > li > .active {
+    color: #ffa500 !important;
+    -webkit-box-shadow: inset 0px -3px #ffa500;
+    -moz-box-shadow:    inset 0px -3px #ffa500;
+    box-shadow:         inset 0px -3px #ffa500;
+  }
+
+  .main-nav > li > .active:hover {
+    color: #ffa500  !important;
+    -webkit-box-shadow: inset 0px -4px #ffa500;
+    -moz-box-shadow:    inset 0px -4px #ffa500;
+    box-shadow:         inset 0px -4px #ffa500;
+  }
+
+  .main-nav > li:hover {
+    color: #ffa500  !important;
+    -webkit-box-shadow: inset 0px -3px #ffa500;
+    -moz-box-shadow:    inset 0px -3px #ffa500;
+    box-shadow:         inset 0px -3px #ffa500;
+  }
+
+  .sidenav > li {
+    width: 100%;
+    text-align: right;
+  }
+
+  .sidenav-close a {
+    float: left;
+  }
+
+  /* Close Sidenav Button */
+  .sidenav-close i {
+    font-size:  4rem;
+    position:   absolute;
+    bottom:     80px;
+    float:      left;
+  }
+
+  /* Burger Button */
+  nav i.material-icons {
+    font-size: xx-large;
+  }
+
+  /* Product Gallery */
+  .card:hover {
+    transform: scale(1.05);
+    transition: all ease 500ms;   
+  }
+
+  .meme-btn {
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .row > * {
+    flex: 1;
+  }
+
+  .card-image {
+    min-height: 150px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  /* Navbar - Logo Adjustments */
+  #logo-container img {
+    object-fit: contain;
+    vertical-align: middle;
+    max-height: 50px;
+  }
+
+  @media only screen and (min-width: 601px) {
+    .nav-wrapper {
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+    }
+  }
+
+  /* Meme page image adjustments */
+  @media only screen and (max-height: 1200px) {
+    #meme-page-content img {
+      max-height: 500px;
+    }
+  }
+
+  @media only screen and (min-height: 1201px) {
+    #meme-page-content img {
+      max-height: 800px;
+    }
+  }
+
+
+  @media only screen and (min-height: 1500px) {
+    #meme-page-content img {
+      max-height: 1000px;
+    }
+  }
