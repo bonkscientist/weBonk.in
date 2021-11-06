@@ -72,9 +72,8 @@
 
           <!-- Dropdown Sorting Button -->
           <ul id='sorting-dropdown' class='dropdown-content'>
-            <li><a href="#!">Random</a></li>
-            <li><a href="#!">Newest first</a></li>
-            <li><a href="#!">Oldest first</a></li>
+            <li><a href="#!" onclick="changeSorting(1)">Newest first</a></li>
+            <li><a href="#!" onclick="changeSorting(2)">Oldest first</a></li>
           </ul>
 
           <!-- Next Page -->
@@ -118,9 +117,10 @@
   <script type="text/javascript">
     var max_page = <?php echo $max_page; ?>;
     var current_page = 1;
+    var sorting = 1;
 
-    function loadMemeGallery (page) {
-      $.post('php/load_meme_gallery.php', {new_page:page}, function(data) {
+    function loadMemeGallery (page, sort) {
+      $.post('php/load_meme_gallery.php', {new_page:page, sort:sorting}, function(data) {
         $('#meme-gallery-content').html(data);
       });
     }
@@ -144,7 +144,7 @@
       if (new_page > 0 && new_page <= max_page) {
         current_page = current_page + inc;
       
-        loadMemeGallery (current_page);
+        loadMemeGallery (current_page, sorting);
         $('#meme-gallery').fadeOut('fast', function(){
           $('#meme-gallery').fadeIn('fast');
           $("html, body").animate({ scrollTop: 0 }, "fast");
@@ -152,7 +152,18 @@
       }
     }
 
-    loadMemeGallery (current_page);
+    function changeSorting (new_sort) {
+      sorting = new_sort;
+      current_page = 1;
+
+      loadMemeGallery (current_page, sorting);
+      $('#meme-gallery').fadeOut('fast', function(){
+        $('#meme-gallery').fadeIn('fast');
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+      });
+    }
+
+    loadMemeGallery (current_page, sorting);
   </script>
 
 </body>
