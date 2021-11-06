@@ -47,7 +47,6 @@
         <li><a href="https://dogebonk.com">DogeBonk.com</a></li>
         <li><a href="https://bonkswap.com">BonkSwap.com</a></li>
         <li><a href="https://BonkChain.com">BonkChain.com</a></li>
-
         <li class="divider"></li>
         <li><a href="https://www.dextools.io/app/bsc/pair-explorer/0xbe80839a3be4d3953d5588a60a11aeaed286b593#utm_source=dogebonk.com">
           DexTools
@@ -59,7 +58,7 @@
       <nav class="grey darken-5" role="navigation">
 
         <div class="nav-wrapper">
-          <a id="logo-container" href="#" class="brand-logo">
+          <a id="logo-container" href="index.php" class="brand-logo">
             <img class="left-align" src="img/weBONK_Logo-Transparent.png" alt="weBONK logo" class="align-text-top">
           </a>
 
@@ -84,10 +83,15 @@
       <li><a class="active" href="#!">HOME</a></li>
       <li><a href="submit.php">SUBMIT</a></li>
       <li><div class="divider"></div></li>
-      <li><a href="www.dogebonk.com">DOGEBONK.COM</a></li>
-      <li><a href="https://poocoin.app/tokens/0xae2df9f730c54400934c06a17462c41c08a06ed8">CHART</a></li>
-
-
+      <li><a href="https://dogebonk.com">DogeBonk.com</a></li>
+      <li><a href="https://bonkswap.com">BonkSwap.com</a></li>
+      <li><a href="https://BonkChain.com">BonkChain.com</a></li>
+      <li class="divider"></li>
+      <li><a href="https://www.dextools.io/app/bsc/pair-explorer/0xbe80839a3be4d3953d5588a60a11aeaed286b593#utm_source=dogebonk.com">
+        DexTools
+      </a></li>
+      <li><a href="https://poocoin.app/tokens/0xae2df9f730c54400934c06a17462c41c08a06ed8">PooCoin</a></li>
+      <li><a href="https://charts.bogged.finance/0xAe2DF9F730c54400934c06a17462c41C08a06ED8">BOGCharts</a></li>
     </ul>
   </header>
 
