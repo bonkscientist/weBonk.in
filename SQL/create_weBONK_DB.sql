@@ -22,7 +22,23 @@ CREATE TABLE IF NOT EXISTS memes (
 	posted_on DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
 	user_id bigint UNSIGNED,
 	PRIMARY KEY (meme_id),
-    	FOREIGN KEY (user_id) REFERENCES users(user_id)
-    	ON DELETE CASCADE   
+	FOREIGN KEY (user_id) REFERENCES users(user_id)
+	ON DELETE CASCADE   
+	ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS memes2 (
+	meme_id bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+	type int DEFAULT 0,
+	title varchar(255),
+	url varchar(505),
+	img LONGBLOB,
+	tags varchar(505),
+	upbonks int DEFAULT 0,
+	posted_on DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+	user_id bigint UNSIGNED,
+	PRIMARY KEY (meme_id),
+	FOREIGN KEY (user_id) REFERENCES users(user_id)
+	ON DELETE CASCADE   
 	ON UPDATE CASCADE
 );

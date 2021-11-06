@@ -41,6 +41,21 @@
   <header>
     <!-- Navigation Bar -->
     <div class="navbar-fixed text-orange">
+
+      <!-- Dropdown Structure -->
+      <ul id="navbar-dropdown" class="dropdown-content">
+        <li><a href="https://dogebonk.com">DogeBonk.com</a></li>
+        <li><a href="https://bonkswap.com">BonkSwap.com</a></li>
+        <li><a href="https://BonkChain.com">BonkChain.com</a></li>
+
+        <li class="divider"></li>
+        <li><a href="https://www.dextools.io/app/bsc/pair-explorer/0xbe80839a3be4d3953d5588a60a11aeaed286b593#utm_source=dogebonk.com">
+          DexTools
+        </a></li>
+        <li><a href="https://poocoin.app/tokens/0xae2df9f730c54400934c06a17462c41c08a06ed8">PooCoin</a></li>
+        <li><a href="https://charts.bogged.finance/0xAe2DF9F730c54400934c06a17462c41C08a06ED8">BOGCharts</a></li>
+      </ul>
+
       <nav class="grey darken-5" role="navigation">
 
         <div class="nav-wrapper">
@@ -52,6 +67,8 @@
           <ul class="main-nav right hide-on-med-and-down">
             <li class="waves-effect"><a class="active" href="#">HOME</a></li>
             <li class="waves-effect"><a href="submit.html">SUBMIT</a></li>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="navbar-dropdown">DOGEBONK<i class="material-icons right">arrow_drop_down</i></a></li>
           </ul>
 
           <!-- Mobile Menu Trigger -->
@@ -64,8 +81,13 @@
 
     <!-- Mobile Nav Bar -->
     <ul id="nav-mobile" class="sidenav right-align">
-      <li><a class="active" href="index.html">HOME</a></li>
-      <li><a href="#">MEMES</a></li>
+      <li><a class="active" href="#!">HOME</a></li>
+      <li><a href="submit.php">SUBMIT</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="www.dogebonk.com">DOGEBONK.COM</a></li>
+      <li><a href="https://poocoin.app/tokens/0xae2df9f730c54400934c06a17462c41c08a06ed8">CHART</a></li>
+
+
     </ul>
   </header>
 
