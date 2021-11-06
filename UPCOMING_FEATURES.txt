@@ -1,0 +1,5 @@
+- Drag and drop meme submission form
+- Search by tags
+- Voting
+- User profiles
+- Random sorting
