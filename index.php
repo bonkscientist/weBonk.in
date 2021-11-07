@@ -72,7 +72,7 @@
                 FEATURED
             </a></li>
             <!-- Dropdown Trigger -->
-            <li><a class="dropdown-trigger" href="#!" data-target="navbar-dropdown">DOGEBONK<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="navbar-dropdown">DOGEBONK<i class="material-icons dropdown-arrow right">arrow_drop_down</i></a></li>
           </ul>
 
           <!-- Mobile Menu Trigger -->

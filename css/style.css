@@ -116,17 +116,17 @@ main {
     float: left;
   }
 
+  .dropdown-arrow {
+    font-size: large !important;
+    margin-left: 2px !important;
+  }
+
   /* Close Sidenav Button */
   .sidenav-close i {
     font-size:  4rem;
     position:   absolute;
     bottom:     80px;
     float:      left;
-  }
-
-  /* Burger Button */
-  nav i.material-icons {
-    font-size: xx-large;
   }
 
   /* Product Gallery */
