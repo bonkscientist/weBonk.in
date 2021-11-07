@@ -1,5 +1,9 @@
 - Drag and drop meme submission form
+- URL to a particular meme (for easy sharing)
+- About page with link to github, this file and other relevant links
 - Search by tags
 - Voting
+- Sort by votes
 - User profiles
 - Random sorting
+- Link to a particular meme page (helps navigate)
