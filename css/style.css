@@ -166,6 +166,23 @@ main {
     }
   }
 
+  /*-----------------
+    Embedded Youtube
+    -----------------*/
+    .embedded_youtube {
+      position: relative;
+      padding-bottom: 56.25%;
+    }
+
+    .embedded_youtube iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+
   /* Meme page image adjustments */
   @media only screen and (max-height: 1200px) {
     #meme-page-content img {

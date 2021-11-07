@@ -33,6 +33,9 @@
 </head>
 
 <body class="black white-text">
+
+  <?php include('php/get_max_page.php') ?>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JL3HC5"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -46,7 +49,6 @@
       <ul id="navbar-dropdown" class="dropdown-content">
         <li><a href="https://dogebonk.com">DogeBonk.com</a></li>
         <li><a href="https://bonkswap.com">BonkSwap.com</a></li>
-        <li><a href="https://BonkChain.com">BonkChain.com</a></li>
         <li class="divider"></li>
         <li><a href="https://www.dextools.io/app/bsc/pair-explorer/0xbe80839a3be4d3953d5588a60a11aeaed286b593#utm_source=dogebonk.com">
           DexTools
@@ -59,13 +61,16 @@
 
         <div class="nav-wrapper">
           <a id="logo-container" href="index.php" class="brand-logo">
-            <img class="left-align" src="img/weBONK_Logo-Transparent.png" alt="weBONK logo" class="align-text-top">
+            <img class="left-align align-text-top" src="img/weBONK_Logo-Transparent.png" alt="weBONK logo">
           </a>
 
           <!-- Normal Nav Bar -->
           <ul class="main-nav right hide-on-med-and-down">
             <li class="waves-effect"><a class="active" href="#">HOME</a></li>
             <li class="waves-effect"><a href="submit.html">SUBMIT</a></li>
+            <li class="waves-effect"><a href="featured.html">
+                FEATURED
+            </a></li>
             <!-- Dropdown Trigger -->
             <li><a class="dropdown-trigger" href="#!" data-target="navbar-dropdown">DOGEBONK<i class="material-icons right">arrow_drop_down</i></a></li>
           </ul>
@@ -80,12 +85,12 @@
 
     <!-- Mobile Nav Bar -->
     <ul id="nav-mobile" class="sidenav right-align">
-      <li><a class="active" href="#!">HOME</a></li>
-      <li><a href="submit.php">SUBMIT</a></li>
+      <li><a class="active" href="#!">Home</a></li>
+      <li><a href="submit.html">Submit</a></li>
+      <li><a class="active" href="featured.html">Featured</a></li>
       <li><div class="divider"></div></li>
       <li><a href="https://dogebonk.com">DogeBonk.com</a></li>
       <li><a href="https://bonkswap.com">BonkSwap.com</a></li>
-      <li><a href="https://BonkChain.com">BonkChain.com</a></li>
       <li class="divider"></li>
       <li><a href="https://www.dextools.io/app/bsc/pair-explorer/0xbe80839a3be4d3953d5588a60a11aeaed286b593#utm_source=dogebonk.com">
         DexTools
@@ -152,8 +157,6 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-
-<?php include('php/get_max_page.php') ?>
 
   <script type="text/javascript">
     var max_page = <?php echo $max_page; ?>;
